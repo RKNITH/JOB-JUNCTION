@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobJunction Website Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        p {
+            color: #666;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #chatbox {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 0 auto;
+            width: 80%;
+            max-width: 600px;
+            margin-bottom: 20px;
+            overflow-y: scroll;
+            height: 300px;
+        }
+
+        #user-input {
+            display: block;
+            margin: 0 auto;
+            width: 80%;
+            max-width: 600px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            width: 80%;
+            max-width: 600px;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #home {
+
+            margin-left: 150px;
+
+            color: #45a049;
+            text-decoration: none;
+            font-weight: bold;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to the JobJunction Chatbot</h1>
+    <p><b>Ask me any questions related to job opportunities, applications, or company details!</b></p>
+
+    <script>
+        function handleUserInput() {
+            const userInput = document.getElementById('user-input').value;
+            const chatbox = document.getElementById('chatbox');
+
+            // Add logic to handle user input and generate responses
+            // For demonstration purposes, let's provide some sample questions and answers:
+            if (userInput.toLowerCase().includes('hello')) {
+                chatbox.innerHTML += '<p><strong>Chatbot:</strong> Hi this is HireNow bot.How may I assist you?</p>';
+            }
+            else if (userInput.toLowerCase().includes('job openings')) {
+                chatbox.innerHTML += '<p><strong>Chatbot:</strong> We currently have openings for software engineers and data analysts. Would you like more details?</p>';
+            } else if (userInput.toLowerCase().includes('application process')) {
+                chatbox.innerHTML += '<p><strong>Chatbot:</strong> To apply, visit our website and submit your resume through the online form. Our team will review it and get back to you.</p>';
+            } else if (userInput.toLowerCase().includes('company culture')) {
+                chatbox.innerHTML += '<p><strong>Chatbot:</strong> Our company values collaboration, innovation, and work-life balance. We organize regular team events and encourage professional growth.</p>';
+            } else {
+                chatbox.innerHTML += '<p><strong>Chatbot:</strong> I apologize, but I don\'t have information on that topic. Please feel free to ask another question!</p>';
+            }
+        }
+    </script>
+
+    <div id="chatbox">
+        <!-- Chatbot responses will appear here -->
+    </div>
+
+    <input type="text" id="user-input" placeholder="Ask a question...">
+    <button onclick="handleUserInput()">Submit</button>
+    <a id="home" href="index.html">Back to home</a>
+</body>
+
+</html>
